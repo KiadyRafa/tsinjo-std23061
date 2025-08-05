@@ -30,7 +30,7 @@ public class VolaService {
         Mono.delay(Duration.ofSeconds(5)).repeat().flatMap(tick ->
             webClient.get()
                 .uri("/v3/payment/" + payment.id())
-                .header("x-api-key", volaApiKey) // ✅ Header correct ici
+                .header("x-api-key", volaApiKey)
                 .retrieve()
                 .bodyToMono(String.class)
                 .doOnNext(response -> LOG.info("Checked payment {}: {}", payment.id(), response))
