@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tsinjo_prod
+    username: postgres
+    password: prodpass
+
+vola:
+  api-key: "13e46640-889f-4d59-b45b-62f4e9dd3830"
